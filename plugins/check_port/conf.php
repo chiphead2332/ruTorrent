@@ -13,3 +13,19 @@ $useWebsiteIPv6 = "portchecker";	// Valid choices:
 
 $checkPortTimeout = 15; // Timeout in seconds for external port checking services
 						// (e.g., yougetsignal, portchecker) and for IP detection services (e.g., ipify)
+
+// Providers tried in order when the primary provider
+// cannot return a definitive result.
+//
+// Valid providers:
+//   yougetsignal
+//   portchecker
+//   globalping
+$failoverProvidersIPv4 = [
+        "globalping",
+        "portchecker",
+];
+
+$failoverProvidersIPv6 = [
+        "globalping",
+];
